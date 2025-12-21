@@ -129,7 +129,7 @@ export default function Page() {
               <div className="flex items-center justify-end">
                 <div className="relative flex h-28 w-44 max-w-full items-center justify-center overflow-hidden rounded-2xl bg-white px-4 py-3 shadow-[0_10px_24px_rgba(30,34,79,0.12)] sm:h-32 sm:w-56 md:h-36 md:w-64">
                   <Image
-                    src="/salvacionNacionalv2.jpg"
+                    src="/salvacionnacionalv2.jpg"
                     alt="Logo Salvacion Nacional"
                     width={640}
                     height={360}
