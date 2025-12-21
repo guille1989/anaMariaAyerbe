@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-ink: #231f20;
+  --brand-orange: #d65527;
+  --brand-yellow: #f4bd31;
+  --brand-navy: #1e224f;
+  --brand-blue: #48a4db;
+  --brand-green: #89c97f;
+  --brand-red: #e93c55;
+  color: var(--brand-ink);
+  background-color: #ffffff;
+}
+
+body {
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, "Segoe UI", Arial,
+    sans-serif;
+  color: var(--brand-ink);
+  background: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-display {
+  font-family: "Copperplate Gothic Bold", Copperplate, "Copperplate Gothic",
+    Georgia, serif;
+  letter-spacing: 0.12em;
+}
+
+.swiper-pagination-bullet {
+  @apply h-2.5 w-2.5 bg-[color:rgba(30,34,79,0.25)] opacity-100 transition;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-[color:var(--brand-navy)];
+}
