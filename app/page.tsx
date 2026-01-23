@@ -7,8 +7,10 @@ import { motion } from "framer-motion";
 import {
   ArrowLeft,
   ArrowRight,
+  Facebook,
   Instagram,
-  Twitter,
+  Music,
+  X,
   Youtube,
 } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -39,25 +41,7 @@ const videos: Video[] = [
     title: "Cronica Urbana - Presentacion",
     url: "https://www.youtube.com/watch?v=ysz5S6PUM-U",
     platform: "youtube",
-  },
-  {
-    id: "2",
-    title: "Voces de Barrio - Segmento",
-    url: "https://www.youtube.com/watch?v=jNgP6d9HraI",
-    platform: "youtube",
-  },
-  {
-    id: "3",
-    title: "Reportaje Comunitario - Especial",
-    url: "https://www.youtube.com/watch?v=O6Xo21L0ybE",
-    platform: "youtube",
-  },
-  {
-    id: "4",
-    title: "Entrevista - Liderazgos Locales",
-    url: "https://www.youtube.com/watch?v=glpHpu3NoZE",
-    platform: "youtube",
-  },
+  }
 ];
 
 const accentBars = [
@@ -127,16 +111,29 @@ export default function Page() {
                 </div>
               </div>
               <div className="flex items-center justify-end">
-                <div className="relative flex h-28 w-44 max-w-full items-center justify-center overflow-hidden rounded-2xl bg-white px-4 py-3 shadow-[0_10px_24px_rgba(30,34,79,0.12)] sm:h-32 sm:w-56 md:h-36 md:w-64">
-                  <Image
-                    src="/salvacionNacionalV2.jpg"
-                    alt="Logo Salvacion Nacional"
-                    width={640}
-                    height={360}
-                    sizes="(min-width:1024px) 16rem, (min-width:640px) 14rem, 11rem"
-                    className="h-full w-full object-contain"
-                    priority
-                  />
+                <div className="relative grid h-28 w-[390px] max-w-full grid-cols-1 grid-rows-2 gap-2 overflow-hidden rounded-2xl bg-white p-2 shadow-[0_10px_24px_rgba(30,34,79,0.12)] sm:h-32 sm:p-3 md:h-36">
+                  <div className="flex h-full w-full items-center justify-center overflow-hidden">
+                    <Image
+                      src="/salvacionNacionalV2.jpg"
+                      alt="Logo Salvacion Nacional"
+                      width={640}
+                      height={360}
+                      sizes="(min-width:1024px) 16rem, (min-width:640px) 14rem, 11rem"
+                      className="h-full w-full object-contain scale-[1.3]"
+                      priority
+                    />
+                  </div>
+                  <div className="flex h-full w-full items-center justify-center overflow-hidden">
+                    <Image
+                      src="/anaMaria102.jpeg"
+                      alt="Numero carton"
+                      width={640}
+                      height={360}
+                      sizes="(min-width:1024px) 16rem, (min-width:640px) 14rem, 11rem"
+                      className="h-full w-full object-contain ml-10"
+                      priority
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -167,23 +164,12 @@ export default function Page() {
                   </h1>
                   <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-[color:rgba(35,31,32,0.7)]">
                     <span className="h-px w-6 bg-[#48A4DB]" />
-                    <span>La voz que representa a la comunidad</span>
+                    <span>SOY LA VOZ DE LA COMUNIDAD</span>
                     <span className="h-px w-6 bg-[#E93C55]" />
                   </div>
                 </div>
               </motion.div>
 
-              <motion.div
-                {...motionSettings}
-                transition={{ ...motionSettings.transition, delay: 0.09 }}
-              >
-                <Button
-                  variant="ghost"
-                  className="rounded-full border border-[color:rgba(30,34,79,0.18)] px-6 py-2 uppercase tracking-[0.14em] text-[var(--brand-navy,#1E224F)] hover:border-[color:rgba(30,34,79,0.35)]"
-                >
-                  Conocer mas
-                </Button>
-              </motion.div>
             </div>
 
             <motion.div
@@ -191,27 +177,46 @@ export default function Page() {
               transition={{ ...motionSettings.transition, delay: 0.12 }}
               className="mt-2 flex flex-wrap items-center gap-4 text-[13px] uppercase tracking-[0.14em] text-[color:rgba(35,31,32,0.7)]"
             >
-              <button
+              <a
+                href="https://www.instagram.com/patriotaama"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="group flex items-center gap-2 rounded-full px-2 py-1 transition hover:text-[var(--brand-navy,#1E224F)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-blue,#48A4DB)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               >
                 <Instagram className="h-4 w-4 text-[var(--brand-blue,#48A4DB)] transition group-hover:text-[var(--brand-navy,#1E224F)]" />
-                <span>@ayerbe.oficial</span>
-              </button>
-              <button
-                aria-label="Twitter"
+                <span>@patriotaama</span>
+              </a>
+              <a
+                href="https://twitter.com/patriotaama"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter)"
                 className="group hidden items-center gap-2 rounded-full px-2 py-1 transition hover:text-[var(--brand-navy,#1E224F)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-blue,#48A4DB)] focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:flex"
               >
-                <Twitter className="h-4 w-4 text-[var(--brand-red,#E93C55)] transition group-hover:text-[var(--brand-navy,#1E224F)]" />
-                <span>@ayerbevoz</span>
-              </button>
-              <button
-                aria-label="YouTube"
+                <X className="h-4 w-4 text-[var(--brand-red,#E93C55)] transition group-hover:text-[var(--brand-navy,#1E224F)]" />
+                <span>@patriotaama</span>
+              </a>
+              <a
+                href="https://www.facebook.com/patriotaama"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
                 className="group flex items-center gap-2 rounded-full px-2 py-1 transition hover:text-[var(--brand-navy,#1E224F)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-blue,#48A4DB)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               >
-                <Youtube className="h-4 w-4 text-[var(--brand-green,#89C97F)] transition group-hover:text-[var(--brand-navy,#1E224F)]" />
-                <span>/AnaMariaAyerbe</span>
-              </button>
+                <Facebook className="h-4 w-4 text-[var(--brand-blue,#48A4DB)] transition group-hover:text-[var(--brand-navy,#1E224F)]" />
+                <span>@patriotaama</span>
+              </a>
+              <a
+                href="https://www.tiktok.com/@amapatriota"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+                className="group flex items-center gap-2 rounded-full px-2 py-1 transition hover:text-[var(--brand-navy,#1E224F)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-blue,#48A4DB)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+              >
+                <Music className="h-4 w-4 text-[var(--brand-yellow,#F4BD31)] transition group-hover:text-[var(--brand-navy,#1E224F)]" />
+                <span>@amapatriota</span>
+              </a>
             </motion.div>
           </motion.div>
 
