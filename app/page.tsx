@@ -86,30 +86,7 @@ export default function Page() {
             className="flex flex-col gap-6 md:col-span-6"
           >
             <div className="flex items-start justify-between gap-4">
-              <div className="flex items-start gap-3">
-                <div
-                  aria-label="Sello o codigo QR"
-                  className="relative h-16 w-16 overflow-hidden rounded-2xl border border-[color:rgba(30,34,79,0.18)] bg-white shadow-[0_14px_36px_rgba(30,34,79,0.16)]"
-                >
-                  <Image
-                    src="/tigreSalvacion.jpg"
-                    alt="Sello Salvacion Nacional"
-                    fill
-                    sizes="64px"
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-                <div className="flex flex-col gap-1">
-                  {accentBars.map((bar) => (
-                    <span
-                      key={`seal-${bar.color}`}
-                      className={`block h-1 rounded-full ${bar.width}`}
-                      style={{ backgroundColor: bar.color }}
-                    />
-                  ))}
-                </div>
-              </div>
+             
               <div className="flex items-center justify-end">
                 <div className="relative grid h-28 w-[390px] max-w-full grid-cols-1 grid-rows-2 gap-2 overflow-hidden rounded-2xl bg-white p-2 shadow-[0_10px_24px_rgba(30,34,79,0.12)] sm:h-32 sm:p-3 md:h-36">
                   <div className="flex h-full w-full items-center justify-center overflow-hidden">
