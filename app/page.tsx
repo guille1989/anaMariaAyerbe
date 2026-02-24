@@ -38,8 +38,20 @@ type Video = {
 const videos: Video[] = [
   {
     id: "1",
-    title: "Cronica Urbana - Presentacion",
-    url: "https://www.youtube.com/watch?v=ysz5S6PUM-U",
+    title: "Ana Maria Ayerbe Cámara Cauca 102",
+    url: "https://www.youtube.com/shorts/8D-0dRwEPPQ",
+    platform: "youtube",
+  },
+  {
+    id: "2",
+    title: "Ana Maria Ayerbe Cámara Cauca 102",
+    url: "https://www.youtube.com/shorts/rIyy7AOidwQ",
+    platform: "youtube",
+  },
+  {
+    id: "3",
+    title: "Ana Maria Ayerbe Cámara Cauca 102",
+    url: "https://www.youtube.com/shorts/4_f37aFAbgQ",
     platform: "youtube",
   }
 ];
